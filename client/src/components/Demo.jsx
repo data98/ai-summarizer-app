@@ -18,7 +18,7 @@ const Demo = () => {
   
   const [copied, setCopied] = useState("");
 
-  const baseURL = 'https://aisummarizedg.onrender.com';
+  const baseURL = 'https://aisummarizedg.onrender.com/';
   // console.log(baseURL);
 
   let ids = '';
