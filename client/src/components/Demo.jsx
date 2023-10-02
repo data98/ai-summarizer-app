@@ -18,7 +18,7 @@ const Demo = () => {
   
   const [copied, setCopied] = useState("");
 
-  const baseURL = window.location.protocol + "//" + window.location.hostname + ':8000';
+  const baseURL = 'https://aisummarizedg.onrender.com';
   // console.log(baseURL);
 
   let ids = '';
