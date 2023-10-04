@@ -1,4 +1,3 @@
-const PORT = 8000;
 import express from 'express';
 import cors from 'cors';
 
@@ -10,6 +9,12 @@ app.use(express.json());
 app.use(cors());
 
 let ids = '';
+
+app.get('/', async (req,res) => {
+    res.status(200).send({
+        message: 'Hello from AI Summarizer',
+    })
+});
 
 // metaphor
 app.post('/search', async (req, res) => {
@@ -83,4 +88,4 @@ app.post('/completions', async (req, res) => {
     }
 })
 
-app.listen(PORT, () => console.log('Your server is running on PORT ' + PORT))
+app.listen(5000, () => console.log('Your server is running on port 5000')); 

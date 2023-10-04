@@ -18,7 +18,8 @@ const Demo = () => {
   
   const [copied, setCopied] = useState("");
 
-  const baseURL = 'https://aisummarizedg.onrender.com';
+  // const baseURL = 'https://ai-summarizer-app-dg.onrender.com';
+  const baseURL = 'http://localhost:5000';
   // console.log(baseURL);
 
   let ids = '';
