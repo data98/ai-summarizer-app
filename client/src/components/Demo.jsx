@@ -18,7 +18,7 @@ const Demo = () => {
   
   const [copied, setCopied] = useState("");
 
-  const baseURL = 'https://ai-summarizer-app-dg.onrender.com';
+  const baseURL = 'https://ai-summarizer-app-dg.onrender.com/';
   // const baseURL = 'http://localhost:5000';
   // console.log(baseURL);
 
@@ -39,7 +39,7 @@ const Demo = () => {
     }
     try {
       setLoading(true);
-      const response = await fetch(`${baseURL}/search`, options);
+      const response = await fetch(`${baseURL}search`, options);
       const data = await response.json().then(data => {
         // console.log("get websites: " + JSON.stringify(data.results));
         setFetchedData(data.results);
@@ -77,7 +77,7 @@ const Demo = () => {
       }
     }
     try {
-      fetch(`${baseURL}/contents?${ids}`, options)
+      fetch(`${baseURL}contents?${ids}`, options)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -111,7 +111,7 @@ const Demo = () => {
       }
     }
     try {
-      const response = await fetch(`${baseURL}/completions`, options);
+      const response = await fetch(`${baseURL}completions`, options);
       const data = await response.json();
       // console.log("GPT response: " + data);
       // console.log(contents);
